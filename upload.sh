@@ -1,7 +1,7 @@
 set -e
 echo "Добавление изменений в репозиторий"
 
-if [! -d.git]; then
+if [ ! -d .git ]; then
     echo "Локальный репозиторий отсутствует"
     exit 1
 fi
@@ -9,8 +9,8 @@ fi
 git status
 git add .
 
-if [-z "$1"]; then
-    COMMIT_MSG = "Auto commit"
+if [ -z "$1" ]; then
+    COMMIT_MSG="Auto commit"
 else
     COMMIT_MSG="$1"
 fi
